@@ -1,0 +1,17 @@
+body {
+	text-transform: uppercase;
+	font-family: helvetica, sans-serif;
+}
+
+#txt {
+	font-weight: bold;
+	font-size: 120px;
+	letter-spacing: 1px;
+}
+
+#about {
+	position: fixed;
+	font-size: x-small;
+	right: 10px;
+	bottom: 5px;
+}
