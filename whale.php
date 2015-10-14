@@ -22,8 +22,9 @@ function save_txt() {
 	global $curr_txt, $txt_num;
 	$curr_txt = preg_replace('/\s+/', ' ', $curr_txt);
 	$curr_txt = trim($curr_txt);
+	$time = elapsed_time();
 	if (!empty($curr_txt)) {
-		echo "$txt_num\n---------\n$curr_txt\n\n";
+		echo "$txt_num ($time)\n-----------------\n$curr_txt\n\n";
 		flush();
 		if (!file_exists('txt')) {
 			mkdir('txt');
@@ -32,6 +33,25 @@ function save_txt() {
 		$txt_num++;
 		$curr_txt = '';
 	}
+}
+
+// How long since $start_time?
+function elapsed_time() {
+	global $start_time;
+	$elapsed = time() - $start_time;
+	$hh = floor($elapsed / 3600);
+	if ($hh < 10) {
+		$hh = "0$hh";
+	}
+	$mm = floor($elapsed / 60);
+	if ($mm < 10) {
+		$mm = "0$mm";
+	}
+	$ss = $elapsed % 60;
+	if ($ss < 10) {
+		$ss = "0$ss";
+	}
+	return "$hh:$mm:$ss";
 }
 
 // Iterate over the full text, one character at a time
