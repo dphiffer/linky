@@ -7,6 +7,7 @@ jQuery(document).ready(function($) {
 		$.get('/whale/txt/' + num + '.txt', function(txt) {
 			$('#txt').html(txt);
 			$('#txt').attr('href', '#' + (num + 1));
+			window.scrollTo(0, 0);
 		});
 	}
 	window.addEventListener('hashchange', update, false);
