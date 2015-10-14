@@ -2,7 +2,7 @@
 
 Moby Dick serialized into tiny texts, created as a coding exercise for a course I’m teaching this semester.
 
-## Text from Project Guttenberg
+## Text from Project Gutenberg
 
 The text is a slightly modified version of [Project Gutenberg’s](http://www.gutenberg.org/cache/epub/2701/pg2701.txt). I deleted the Sub-Sub-Librarian introductory text and converted double-hyphens into em-dashes.
 
