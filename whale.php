@@ -10,6 +10,7 @@ header('Content-Type: text/plain; charset=utf-8');
 
 // Load the full contents of Moby Dick
 $source = file_get_contents('whale.txt');
+$source_length = mb_strlen($source);
 $break_chars = '.,;!?—';
 
 // Set up state variables
@@ -19,12 +20,13 @@ $curr_txt = '';
 
 // Save $curr_txt to a file, reset state variables
 function save_txt() {
-	global $curr_txt, $txt_num;
+	global $curr_txt, $txt_num, $source_index, $source_length;
 	$curr_txt = preg_replace('/\s+/', ' ', $curr_txt);
 	$curr_txt = trim($curr_txt);
 	$time = elapsed_time();
+	$percent = round(100 * $source_index / $source_length) . '%';
 	if (!empty($curr_txt)) {
-		echo "$txt_num ($time)\n-----------------\n$curr_txt\n\n";
+		echo "$txt_num.txt ($time $percent)\n----------------------------\n$curr_txt\n\n";
 		flush();
 		if (!file_exists('txt')) {
 			mkdir('txt');
@@ -55,7 +57,7 @@ function elapsed_time() {
 }
 
 // Iterate over the full text, one character at a time
-while ($source_index < mb_strlen($source)) {
+while ($source_index < $source_length) {
 	$char = mb_substr($source, $source_index, 1);
 
 	// If we reach a break character, and we have at least 25 characters...
