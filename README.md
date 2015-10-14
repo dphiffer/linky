@@ -1,6 +1,6 @@
 # The Whale
 
-Moby Dick serialized into tiny texts, created as a coding exercise for a course I’m teaching this semester. 
+Moby Dick serialized into tiny texts, created as a coding exercise for a course I’m teaching this semester.
 
 ## Text from Project Guttenberg
 
@@ -12,4 +12,4 @@ Run `whale.php` to break `whale.txt` into tiny text files. There is also a [zip 
 
 ## Design based on BOIYNB
 
-The text treatment is based on [Jonathan Vingiano’s](http://jonathanvingiano.com/) iconic [Barack Obama Is Your New Bicycle](http://barackobamaisyournewbicycle.com/).
+The text treatment is based on [Mat Honan’s](http://www.honan.net/) iconic [Barack Obama Is Your New Bicycle](http://barackobamaisyournewbicycle.com/).
