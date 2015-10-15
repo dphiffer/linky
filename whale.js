@@ -6,7 +6,11 @@ jQuery(document).ready(function($) {
 		}
 		$.get('/whale/txt/' + num + '.txt', function(txt) {
 			$('#txt').html(txt);
-			$('#txt').attr('href', '#' + (num + 1));
+			if (num < 23013) {
+				$('#txt').attr('href', '#' + (num + 1));
+			} else {
+				$('#txt').attr('href', '#0');
+			}
 			window.scrollTo(0, 0);
 		});
 	}
