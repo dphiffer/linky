@@ -3,15 +3,42 @@
 // This is going to run for a long while
 set_time_limit(0);
 $start_time = time();
+$sources = glob('txt/*.txt');
+
+if (!empty($argc)) {
+	// Run from the command line
+	if (empty($argv[1])) {
+		$sources = implode("\n", $sources);
+		die("Usage: php linky.php txt/source.txt\n\nSources:\n$sources\n");
+	}
+} else if (empty($_GET['source'])) {
+	// Or from a web browser
+	foreach ($sources as $source) {
+		echo "<a href=\"linky.php?source=$source\">$source</a><br>\n";
+	}
+	exit;
+}
 
 // Unicode, aww yiss
 mb_internal_encoding('UTF-8');
 header('Content-Type: text/plain; charset=utf-8');
 
-// Load the full contents of Moby Dick
-$source = file_get_contents('whale.txt');
+// Load the full contents of source text
+if (!empty($argv[1])) {
+	$filename = $argv[1];
+} else {
+	$filename = str_replace('..', '', $_GET['source']);
+}
+if (!file_exists($filename)) {
+	die("Not found: $filename\n");
+}
+$source = file_get_contents($filename);
 $source_length = mb_strlen($source);
 $break_chars = '.,;!?—';
+$dir = str_replace('.txt', '', $filename);
+if (!file_exists($dir)) {
+	mkdir($dir);
+}
 
 // Set up state variables
 $source_index = 0;
@@ -20,7 +47,7 @@ $curr_txt = '';
 
 // Save $curr_txt to a file, reset state variables
 function save_txt() {
-	global $curr_txt, $txt_num, $source_index, $source_length;
+	global $dir, $curr_txt, $txt_num, $source_index, $source_length;
 	$curr_txt = preg_replace('/\s+/', ' ', $curr_txt);
 	$curr_txt = trim($curr_txt);
 	$time = elapsed_time();
@@ -28,10 +55,7 @@ function save_txt() {
 	if (!empty($curr_txt)) {
 		echo "$txt_num.txt ($time $percent)\n----------------------------\n$curr_txt\n\n";
 		flush();
-		if (!file_exists('txt')) {
-			mkdir('txt');
-		}
-		file_put_contents("txt/$txt_num.txt", $curr_txt);
+		file_put_contents("$dir/$txt_num.txt", $curr_txt);
 		$txt_num++;
 		$curr_txt = '';
 	}
