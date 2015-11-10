@@ -28,6 +28,11 @@ if (!empty($argv[1])) {
 	$filename = $argv[1];
 } else {
 	$filename = str_replace('..', '', $_GET['source']);
+	
+	// Don't run on the public web
+	if ($_SERVER['HTTP_HOST'] == 'phiffer.org') {
+		die("Sorry, this is disabled.");
+	}
 }
 if (!file_exists($filename)) {
 	die("Not found: $filename\n");
@@ -53,8 +58,8 @@ function save_txt() {
 	$time = elapsed_time();
 	$percent = round(100 * $source_index / $source_length) . '%';
 	if (!empty($curr_txt)) {
-		echo "$txt_num.txt ($time $percent)\n----------------------------\n$curr_txt\n\n";
-		flush();
+		//echo "$txt_num.txt ($time $percent)\n----------------------------\n$curr_txt\n\n";
+		//flush();
 		file_put_contents("$dir/$txt_num.txt", $curr_txt);
 		$txt_num++;
 		$curr_txt = '';

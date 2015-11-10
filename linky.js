@@ -11,13 +11,14 @@ jQuery(document).ready(function($) {
 			window.addEventListener('hashchange', update, false);
 			update();
 			document.title = index[txt].title;
+			$('#about').append(', source: <a href="' + index[txt].source + '">Project Gutenberg</a>');
 		} else {
 			var texts = [];
 			for (txt in index) {
 				texts.push('<a href="' + txt + '">' + index[txt].title + '</a>');
 			}
 			$('#txt').remove();
-			$(document.body).append('<div id="txt">Linky / ' + texts.join(' / ') + '</div>');
+			$(document.body).append('<div id="txt">Linky<ul><li>' + texts.join('</li><li>') + '</li></ul></div>');
 		}
 	});
 	function update() {

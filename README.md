@@ -4,10 +4,15 @@ This project began as a coding exercise for a course I’m teaching this semeste
 
 ## Texts from Project Gutenberg
 
-* [Moby Dick; Or, The Whale](https://www.gutenberg.org/ebooks/2701) by Herman Melville
+* [Jane Eyre](http://www.gutenberg.org/ebooks/1260) by Charlotte Brontë
 * [Le Morte D’Arthur](https://www.gutenberg.org/ebooks/1251) by Thomas Malory
+* [Moby Dick; Or, The Whale](https://www.gutenberg.org/ebooks/2701) by Herman Melville
+* [Frankenstein; Or, The Modern Prometheus](http://www.gutenberg.org/ebooks/84) by Mary Shelley
+* [Twenty Thousand Leagues Under the Sea](https://www.gutenberg.org/ebooks/164) by Jules Verne
+* [A Journey to the Centre of the Earth](https://www.gutenberg.org/ebooks/18857) by Jules Verne
+* [The Time Machine](http://www.gutenberg.org/ebooks/35) by H. G. Wells
 
-The source texts have been slightly modified prior to breaking them into many smaller text files. For example, I’ve deleted introductory and preface text and converted double-hyphens into em-dashes.
+The source texts have been slightly modified prior to breaking them into many smaller text files. For example, I’ve deleted introductory and preface text and converted double-hyphens into em-dashes. I also converted `\r\n` Windows-style line breaks to `\n` Unix-style line breaks.
 
 ## Preparing the .txt files
 
