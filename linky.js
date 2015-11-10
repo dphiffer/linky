@@ -1,8 +1,8 @@
 jQuery(document).ready(function($) {
 	var txt = null;
 	var max = 0;
-	$.get('txt/index.json', function(index) {
-		var txtMatch = location.pathname.match(/linky\/([^\/]+)$/);
+	$.get('/linky/txt/index.json', function(index) {
+		var txtMatch = location.pathname.match(/linky\/([^\/]+)/);
 		if (txtMatch) {
 			txt = txtMatch[1];
 		}
@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
 		if (isNaN(num)) {
 			num = 0;
 		}
-		$.get('txt/' + txt + '/' + num + '.txt', function(txt) {
+		$.get('/linky/txt/' + txt + '/' + num + '.txt', function(txt) {
 			$('#txt').html(txt);
 			if (num < max) {
 				$('#txt').attr('href', '#' + (num + 1));
