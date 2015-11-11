@@ -4,10 +4,13 @@ This project began as a coding exercise for a course I’m teaching this semeste
 
 ## Texts from Project Gutenberg
 
-* [Jane Eyre](http://www.gutenberg.org/ebooks/1260) by Charlotte Brontë
+* [Jane Eyre](https://www.gutenberg.org/ebooks/1260) by Charlotte Brontë
+* [Don Quixote](https://www.gutenberg.org/ebooks/996) by Miguel de Cervantes Saavedra
+* [A Christmas Carol](https://www.gutenberg.org/ebooks/46) by Charles Dickens
+* [Siddhartha](https://www.gutenberg.org/ebooks/2500) by Hermann Hesse
 * [Le Morte D’Arthur](https://www.gutenberg.org/ebooks/1251) by Thomas Malory
-* [Moby Dick; Or, The Whale](https://www.gutenberg.org/ebooks/2701) by Herman Melville
-* [Frankenstein; Or, The Modern Prometheus](http://www.gutenberg.org/ebooks/84) by Mary Shelley
+* [Moby Dick](https://www.gutenberg.org/ebooks/2701) by Herman Melville
+* [Frankenstein](http://www.gutenberg.org/ebooks/84) by Mary Shelley
 * [Twenty Thousand Leagues Under the Sea](https://www.gutenberg.org/ebooks/164) by Jules Verne
 * [A Journey to the Centre of the Earth](https://www.gutenberg.org/ebooks/18857) by Jules Verne
 * [The Time Machine](http://www.gutenberg.org/ebooks/35) by H. G. Wells

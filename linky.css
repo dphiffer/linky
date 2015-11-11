@@ -16,6 +16,21 @@ body {
 	bottom: 5px;
 }
 
+h1 {
+	font-size: 1em;
+	margin: 0;
+}
+
+.title h1 {
+	margin: 0;
+}
+
+h2 {
+	font-size: 0.5em;
+	margin: 10px 0 0 0;
+	text-transform: none;
+}
+
 ul {
 	padding: 0;
 }

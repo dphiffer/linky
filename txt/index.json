@@ -1,1 +1,62 @@
-{"jane-eyre":{"title":"JANE EYRE","max":20290,"source":"http://www.gutenberg.org/ebooks/1260"},"le-morte-d-arthur":{"title":"LE MORTE D'ARTHUR","max":15789,"source":"https://www.gutenberg.org/ebooks/1251"},"moby-dick":{"title":"MOBY DICK; OR THE WHALE","max":23013,"source":"https://www.gutenberg.org/ebooks/2701"},"frankenstein":{"title":"FRANKENSTEIN; OR THE MODERN PROMETHEUS","max":7150,"source":"http://www.gutenberg.org/ebooks/84"},"20k-leagues":{"title":"TWENTY THOUSAND LEAGUES UNDER THE SEA","max":11665,"source":"https://www.gutenberg.org/ebooks/164"},"journey-to-the-centre-of-the-earth":{"title":"A JOURNEY TO THE CENTRE OF THE EARTH","max":9292,"source":"https://www.gutenberg.org/ebooks/18857"},"time-machine":{"title":"THE TIME MACHINE","max":3357,"source":"http://www.gutenberg.org/ebooks/35"}}
+{
+	"jane-eyre": {
+		"title": "Jane Eyre",
+		"author": "Charlotte Brontë",
+		"max": 20290,
+		"source": "https://www.gutenberg.org/ebooks/1260"
+	},
+	"don-quixote": {
+		"title": "Don Quixote",
+		"author": "Miguel de Cervantes Saavedra",
+		"max": 36943,
+		"source": "https://www.gutenberg.org/ebooks/996"
+	},
+	"christmas-carol": {
+		"title": "A Christmas Carol",
+		"author": "Charles Dickens",
+		"max": 3436,
+		"source": "https://www.gutenberg.org/ebooks/46"
+	},
+	"siddhartha": {
+		"title": "Siddhartha",
+		"author": "Hermann Hesse",
+		"max": 4566,
+		"source": "https://www.gutenberg.org/ebooks/2500"
+	},
+	"le-morte-d-arthur": {
+		"title": "Le Morte D’Arthur",
+		"author": "Thomas Malory",
+		"max": 15789,
+		"source": "https://www.gutenberg.org/ebooks/1251"
+	},
+	"moby-dick": {
+		"title": "Moby Dick",
+		"author": "Herman Melville",
+		"max": 23013,
+		"source": "https://www.gutenberg.org/ebooks/2701"
+	},
+	"frankenstein": {
+		"title": "Frankenstein",
+		"author": "Mary Shelley",
+		"max": 7150,
+		"source": "https://www.gutenberg.org/ebooks/84"
+	},
+	"20k-leagues": {
+		"title": "Twenty Thousand Leagues Under the Sea",
+		"author": "Jules Verne",
+		"max": 11666,
+		"source": "https://www.gutenberg.org/ebooks/164"
+	},
+	"journey-to-the-centre-of-the-earth": {
+		"title": "A Journey to the Centre of the Earth",
+		"author": "Jules Verne",
+		"max": 9293,
+		"source": "https://www.gutenberg.org/ebooks/18857"
+	},
+	"time-machine": {
+		"title": "The Time Machine",
+		"author": "H. G. Wells",
+		"max": 3357,
+		"source": "http://www.gutenberg.org/ebooks/35"
+	}
+}
