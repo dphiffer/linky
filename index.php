@@ -12,7 +12,7 @@ $twitter_image = 'https://phiffer.org/linky/img/linky-twitter.jpg';
 $twitter_title = "Linky: $og_description";
 
 $source = '';
-if (preg_match('#linky/([^/]+)#', $_SERVER['REQUEST_URI'], $matches)) {
+if (preg_match('#linky/([^/?]+)#', $_SERVER['REQUEST_URI'], $matches)) {
 	$id = $matches[1];
 	if (!empty($index->$id)) {
 		$title  = "{$index->$id->title} by {$index->$id->author}";
@@ -48,7 +48,7 @@ if (preg_match('#linky/([^/]+)#', $_SERVER['REQUEST_URI'], $matches)) {
 	</head>
 	<body>
 		<?php
-		
+
 		if ($title == 'Linky') {
 			echo "<div id=\"txt\"><div class=\"title\"><h1><a href=\"https://github.com/dphiffer/linky\">Linky</a></h1><h2>Great novels serialized into tiny texts</h2></div><ul>";
 			foreach (get_object_vars($index) as $id => $txt) {
@@ -58,7 +58,7 @@ if (preg_match('#linky/([^/]+)#', $_SERVER['REQUEST_URI'], $matches)) {
 		} else {
 			echo '<a href="#" id="txt"></a>';
 		}
-		
+
 		?>
 
 		<div id="about">With apologies to <a href="http://barackobamaisyournewbicycle.com/">BOIYNB</a>, more info on <a href="https://github.com/dphiffer/linky">GitHub</a><?php echo $source; ?></div>

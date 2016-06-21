@@ -17,6 +17,10 @@ This project began as a coding exercise for a course I’m teaching this semeste
 
 The source texts have been slightly modified prior to breaking them into many smaller text files. For example, I’ve deleted introductory and preface text and converted double-hyphens into em-dashes. I also converted `\r\n` Windows-style line breaks to `\n` Unix-style line breaks.
 
+## Auto-advance
+
+Add `?wait=15` to the URL to auto-advance forward every 15 seconds.
+
 ## Preparing the .txt files
 
 Run `linky.php` to break a source into tiny text files.

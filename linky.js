@@ -11,6 +11,22 @@ jQuery(document).ready(function($) {
 			window.addEventListener('hashchange', update, false);
 			update();
 		}
+		var wait = location.search.match(/wait=(\d+)/);
+		if (wait) {
+			wait = parseInt(wait[1]);
+			setInterval(function() {
+				var num = parseInt(location.hash.substr(1));
+				if (isNaN(num)) {
+					num = 0;
+				}
+				num++;
+				if (num < max) {
+					window.location = '#' + num;
+				} else {
+					window.location = '#0';
+				}
+			}, wait * 1000);
+		}
 	});
 	function update() {
 		var num = parseInt(location.hash.substr(1));
