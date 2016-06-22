@@ -1,6 +1,7 @@
 jQuery(document).ready(function($) {
 	var txt = null;
 	var max = 0;
+	var waitInterval;
 	$.get('/linky/txt/index.json', function(index) {
 		var txtMatch = location.pathname.match(/linky\/([^\/]+)/);
 		if (txtMatch) {
@@ -14,7 +15,7 @@ jQuery(document).ready(function($) {
 		var wait = location.search.match(/wait=(\d+)/);
 		if (wait) {
 			wait = parseInt(wait[1]);
-			setInterval(function() {
+			waitInterval = setInterval(function() {
 				var num = parseInt(location.hash.substr(1));
 				if (isNaN(num)) {
 					num = 0;
@@ -43,4 +44,9 @@ jQuery(document).ready(function($) {
 			window.scrollTo(0, 0);
 		});
 	}
+	$('#txt').click(function(e) {
+		if (waitInterval) {
+			clearInterval(waitInterval);
+		}
+	});
 });
